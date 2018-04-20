@@ -1,6 +1,6 @@
 # Swagger\Client\NTP1Api
 
-All URIs are relative to *https://ntp1node.nebl.io:1443*
+All URIs are relative to *https://ntp1node.nebl.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**getTokenId**](NTP1Api.md#getTokenId) | **GET** /ntp1/tokenid/{tokensymbol} | Returns the tokenId representing a token
 [**getTokenMetadataOfIssuance**](NTP1Api.md#getTokenMetadataOfIssuance) | **GET** /ntp1/tokenmetadata/{tokenid} | Get Issuance Metadata of Token
 [**getTokenMetadataOfUtxo**](NTP1Api.md#getTokenMetadataOfUtxo) | **GET** /ntp1/tokenmetadata/{tokenid}/{utxo} | Get UTXO Metadata of Token
+[**getTransactionInfo**](NTP1Api.md#getTransactionInfo) | **GET** /ntp1/transactioninfo/{txid} | Information On an NTP1 Transaction
 [**issueToken**](NTP1Api.md#issueToken) | **POST** /ntp1/issue | Builds a transaction that issues a new NTP1 Token
 [**sendToken**](NTP1Api.md#sendToken) | **POST** /ntp1/sendtoken | Builds a transaction that sends an NTP1 Token
 
@@ -348,6 +349,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\GetTokenMetadataResponse**](../Model/GetTokenMetadataResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getTransactionInfo**
+> \Swagger\Client\Model\GetTransactionInfoResponse getTransactionInfo($txid)
+
+Information On an NTP1 Transaction
+
+Returns detailed information regarding an NTP1 transaction.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\Client\Api\NTP1Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$txid = "txid_example"; // string | Neblio txid to get information on.
+
+try {
+    $result = $apiInstance->getTransactionInfo($txid);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling NTP1Api->getTransactionInfo: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **txid** | **string**| Neblio txid to get information on. |
+
+### Return type
+
+[**\Swagger\Client\Model\GetTransactionInfoResponse**](../Model/GetTransactionInfoResponse.md)
 
 ### Authorization
 
