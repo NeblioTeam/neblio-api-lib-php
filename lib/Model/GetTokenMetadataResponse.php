@@ -58,6 +58,7 @@ class GetTokenMetadataResponse implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'token_id' => 'string',
+        'some_utxo' => 'string',
         'divisibility' => 'float',
         'lock_status' => 'bool',
         'aggregation_policy' => 'string',
@@ -80,6 +81,7 @@ class GetTokenMetadataResponse implements ModelInterface, ArrayAccess
       */
     protected static $openAPIFormats = [
         'token_id' => null,
+        'some_utxo' => null,
         'divisibility' => null,
         'lock_status' => null,
         'aggregation_policy' => null,
@@ -123,6 +125,7 @@ class GetTokenMetadataResponse implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'token_id' => 'tokenId',
+        'some_utxo' => 'someUtxo',
         'divisibility' => 'divisibility',
         'lock_status' => 'lockStatus',
         'aggregation_policy' => 'aggregationPolicy',
@@ -145,6 +148,7 @@ class GetTokenMetadataResponse implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'token_id' => 'setTokenId',
+        'some_utxo' => 'setSomeUtxo',
         'divisibility' => 'setDivisibility',
         'lock_status' => 'setLockStatus',
         'aggregation_policy' => 'setAggregationPolicy',
@@ -167,6 +171,7 @@ class GetTokenMetadataResponse implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'token_id' => 'getTokenId',
+        'some_utxo' => 'getSomeUtxo',
         'divisibility' => 'getDivisibility',
         'lock_status' => 'getLockStatus',
         'aggregation_policy' => 'getAggregationPolicy',
@@ -243,6 +248,7 @@ class GetTokenMetadataResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['token_id'] = isset($data['token_id']) ? $data['token_id'] : null;
+        $this->container['some_utxo'] = isset($data['some_utxo']) ? $data['some_utxo'] : null;
         $this->container['divisibility'] = isset($data['divisibility']) ? $data['divisibility'] : null;
         $this->container['lock_status'] = isset($data['lock_status']) ? $data['lock_status'] : null;
         $this->container['aggregation_policy'] = isset($data['aggregation_policy']) ? $data['aggregation_policy'] : null;
@@ -302,6 +308,30 @@ class GetTokenMetadataResponse implements ModelInterface, ArrayAccess
     public function setTokenId($token_id)
     {
         $this->container['token_id'] = $token_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets some_utxo
+     *
+     * @return string|null
+     */
+    public function getSomeUtxo()
+    {
+        return $this->container['some_utxo'];
+    }
+
+    /**
+     * Sets some_utxo
+     *
+     * @param string|null $some_utxo Example UTXO containing this token.
+     *
+     * @return $this
+     */
+    public function setSomeUtxo($some_utxo)
+    {
+        $this->container['some_utxo'] = $some_utxo;
 
         return $this;
     }
