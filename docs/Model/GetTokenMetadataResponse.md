@@ -10,13 +10,13 @@ Name | Type | Description | Notes
 **total_supply** | **float** | Total number of tokens in supply | [optional] 
 **num_of_holders** | **float** | Total number of addresses this token is held at | [optional] 
 **num_of_transfers** | **float** | Total number of transactions of this token | [optional] 
-**numof_issuance** | **float** | Total number of times this token has been issued | [optional] 
+**num_of_issuance** | **float** | Total number of times this token has been issued | [optional] 
 **num_of_burns** | **float** | Number of times tokens have been burned | [optional] 
 **first_block** | **float** | Block number token was issued in | [optional] 
 **issuance_txid** | **string** | TXID the token was issued with | [optional] 
 **issue_address** | **string** | Address that issued the tokens | [optional] 
-**metadata_of_issuance** | [**\NeblioAPI\Model\GetTokenMetadataResponseMetadataOfIssuance**](GetTokenMetadataResponseMetadataOfIssuance.md) |  | [optional] 
-**metadata_of_utxo** | [**\NeblioAPI\Model\GetTokenMetadataResponseMetadataOfIssuance**](GetTokenMetadataResponseMetadataOfIssuance.md) |  | [optional] 
+**metadata_of_issuence** | [**\NeblioAPI\Model\GetTokenMetadataResponseMetadataOfIssuence**](GetTokenMetadataResponseMetadataOfIssuence.md) |  | [optional] 
+**metadata_of_utxo** | [**\NeblioAPI\Model\GetTokenMetadataResponseMetadataOfIssuence**](GetTokenMetadataResponseMetadataOfIssuence.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

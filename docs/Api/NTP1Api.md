@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**getAddressInfo**](NTP1Api.md#getAddressInfo) | **GET** /ntp1/addressinfo/{address} | Information On a Neblio Address
 [**getTokenHolders**](NTP1Api.md#getTokenHolders) | **GET** /ntp1/stakeholders/{tokenid} | Get Addresses Holding a Token
 [**getTokenId**](NTP1Api.md#getTokenId) | **GET** /ntp1/tokenid/{tokensymbol} | Returns the tokenId representing a token
-[**getTokenMetadataOfIssuance**](NTP1Api.md#getTokenMetadataOfIssuance) | **GET** /ntp1/tokenmetadata/{tokenid} | Get Issuance Metadata of Token
+[**getTokenMetadata**](NTP1Api.md#getTokenMetadata) | **GET** /ntp1/tokenmetadata/{tokenid} | Get Metadata of Token
 [**getTokenMetadataOfUtxo**](NTP1Api.md#getTokenMetadataOfUtxo) | **GET** /ntp1/tokenmetadata/{tokenid}/{utxo} | Get UTXO Metadata of Token
 [**getTransactionInfo**](NTP1Api.md#getTransactionInfo) | **GET** /ntp1/transactioninfo/{txid} | Information On an NTP1 Transaction
 [**issueToken**](NTP1Api.md#issueToken) | **POST** /ntp1/issue | Builds a transaction that issues a new NTP1 Token
@@ -266,12 +266,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getTokenMetadataOfIssuance**
-> \NeblioAPI\Model\GetTokenMetadataResponse getTokenMetadataOfIssuance($tokenid)
+# **getTokenMetadata**
+> \NeblioAPI\Model\GetTokenMetadataResponse getTokenMetadata($tokenid)
 
-Get Issuance Metadata of Token
+Get Metadata of Token
 
-Returns the metadata associated with a token at time of issuance.
+Returns the metadata associated with a token.
 
 ### Example
 ```php
@@ -287,10 +287,10 @@ $apiInstance = new NeblioAPI\Api\NTP1Api(
 $tokenid = 'tokenid_example'; // string | TokenId to request metadata for
 
 try {
-    $result = $apiInstance->getTokenMetadataOfIssuance($tokenid);
+    $result = $apiInstance->getTokenMetadata($tokenid);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling NTP1Api->getTokenMetadataOfIssuance: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling NTP1Api->getTokenMetadata: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

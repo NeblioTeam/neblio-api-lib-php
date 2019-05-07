@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**testnetGetAddressInfo**](TestnetNTP1Api.md#testnetGetAddressInfo) | **GET** /testnet/ntp1/addressinfo/{address} | Information On a Neblio Address
 [**testnetGetTokenHolders**](TestnetNTP1Api.md#testnetGetTokenHolders) | **GET** /testnet/ntp1/stakeholders/{tokenid} | Get Addresses Holding a Token
 [**testnetGetTokenId**](TestnetNTP1Api.md#testnetGetTokenId) | **GET** /testnet/ntp1/tokenid/{tokensymbol} | Returns the tokenId representing a token
-[**testnetGetTokenMetadataOfIssuance**](TestnetNTP1Api.md#testnetGetTokenMetadataOfIssuance) | **GET** /testnet/ntp1/tokenmetadata/{tokenid} | Get Issuance Metadata of Token
+[**testnetGetTokenMetadata**](TestnetNTP1Api.md#testnetGetTokenMetadata) | **GET** /testnet/ntp1/tokenmetadata/{tokenid} | Get Metadata of Token
 [**testnetGetTokenMetadataOfUtxo**](TestnetNTP1Api.md#testnetGetTokenMetadataOfUtxo) | **GET** /testnet/ntp1/tokenmetadata/{tokenid}/{utxo} | Get UTXO Metadata of Token
 [**testnetGetTransactionInfo**](TestnetNTP1Api.md#testnetGetTransactionInfo) | **GET** /testnet/ntp1/transactioninfo/{txid} | Information On an NTP1 Transaction
 [**testnetIssueToken**](TestnetNTP1Api.md#testnetIssueToken) | **POST** /testnet/ntp1/issue | Builds a transaction that issues a new NTP1 Token
@@ -266,12 +266,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **testnetGetTokenMetadataOfIssuance**
-> \NeblioAPI\Model\GetTokenMetadataResponse testnetGetTokenMetadataOfIssuance($tokenid)
+# **testnetGetTokenMetadata**
+> \NeblioAPI\Model\GetTokenMetadataResponse testnetGetTokenMetadata($tokenid)
 
-Get Issuance Metadata of Token
+Get Metadata of Token
 
-Returns the metadata associated with a token at time of issuance.
+Returns the metadata associated with a token.
 
 ### Example
 ```php
@@ -287,10 +287,10 @@ $apiInstance = new NeblioAPI\Api\TestnetNTP1Api(
 $tokenid = 'tokenid_example'; // string | TokenId to request metadata for
 
 try {
-    $result = $apiInstance->testnetGetTokenMetadataOfIssuance($tokenid);
+    $result = $apiInstance->testnetGetTokenMetadata($tokenid);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TestnetNTP1Api->testnetGetTokenMetadataOfIssuance: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TestnetNTP1Api->testnetGetTokenMetadata: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

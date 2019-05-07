@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **issuer** | **string** | Name of token issuer | [optional] 
 **description** | **string** | Long name or description of token (ex. Nibble) | [optional] 
 **urls** | [**\NeblioAPI\Model\IssueTokenRequestMetadataUrls[]**](IssueTokenRequestMetadataUrls.md) |  | [optional] 
-**user_data** | [**\NeblioAPI\Model\GetTokenMetadataResponseMetadataOfIssuanceDataUserData**](GetTokenMetadataResponseMetadataOfIssuanceDataUserData.md) |  | [optional] 
+**user_data** | [**\NeblioAPI\Model\GetTokenMetadataResponseMetadataOfIssuenceDataUserData**](GetTokenMetadataResponseMetadataOfIssuenceDataUserData.md) |  | [optional] 
 **encryptions** | [**\NeblioAPI\Model\IssueTokenRequestMetadataEncryptions[]**](IssueTokenRequestMetadataEncryptions.md) | Array of encryption instruction objects for encrypting userData | [optional] 
 **rules** | [**\NeblioAPI\Model\IssueTokenRequestMetadataRules**](IssueTokenRequestMetadataRules.md) |  | [optional] 
 
