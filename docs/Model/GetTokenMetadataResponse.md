@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **issuance_txid** | **string** | TXID the token was issued with | [optional] 
 **issue_address** | **string** | Address that issued the tokens | [optional] 
 **metadata_of_issuence** | [**\NeblioAPI\Model\GetTokenMetadataResponseMetadataOfIssuence**](GetTokenMetadataResponseMetadataOfIssuence.md) |  | [optional] 
-**metadata_of_utxo** | [**\NeblioAPI\Model\GetTokenMetadataResponseMetadataOfIssuence**](GetTokenMetadataResponseMetadataOfIssuence.md) |  | [optional] 
+**metadata_of_utxo** | [**\NeblioAPI\Model\GetTokenMetadataResponseMetadataOfUtxo**](GetTokenMetadataResponseMetadataOfUtxo.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

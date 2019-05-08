@@ -1,6 +1,6 @@
 <?php
 /**
- * IssueTokenRequestMetadataRulesExpiration
+ * GetTokenMetadataResponseMetadataOfUtxo
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \NeblioAPI\ObjectSerializer;
 
 /**
- * IssueTokenRequestMetadataRulesExpiration Class Doc Comment
+ * GetTokenMetadataResponseMetadataOfUtxo Class Doc Comment
  *
  * @category Class
- * @description Object describing expiration rules of the token
+ * @description Metadata set for UTXO
  * @package  NeblioAPI
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class IssueTokenRequestMetadataRulesExpiration implements ModelInterface, ArrayAccess
+class GetTokenMetadataResponseMetadataOfUtxo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class IssueTokenRequestMetadataRulesExpiration implements ModelInterface, ArrayA
       *
       * @var string
       */
-    protected static $openAPIModelName = 'issueTokenRequest_metadata_rules_expiration';
+    protected static $openAPIModelName = 'getTokenMetadataResponse_metadataOfUtxo';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +58,7 @@ class IssueTokenRequestMetadataRulesExpiration implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPITypes = [
-        'valid_until' => 'float',
-        'locked' => 'bool'
+        'user_data' => '\NeblioAPI\Model\GetTokenMetadataResponseMetadataOfUtxoUserData'
     ];
 
     /**
@@ -68,8 +67,7 @@ class IssueTokenRequestMetadataRulesExpiration implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'valid_until' => null,
-        'locked' => null
+        'user_data' => null
     ];
 
     /**
@@ -99,8 +97,7 @@ class IssueTokenRequestMetadataRulesExpiration implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $attributeMap = [
-        'valid_until' => 'validUntil',
-        'locked' => 'locked'
+        'user_data' => 'userData'
     ];
 
     /**
@@ -109,8 +106,7 @@ class IssueTokenRequestMetadataRulesExpiration implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $setters = [
-        'valid_until' => 'setValidUntil',
-        'locked' => 'setLocked'
+        'user_data' => 'setUserData'
     ];
 
     /**
@@ -119,8 +115,7 @@ class IssueTokenRequestMetadataRulesExpiration implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $getters = [
-        'valid_until' => 'getValidUntil',
-        'locked' => 'getLocked'
+        'user_data' => 'getUserData'
     ];
 
     /**
@@ -183,8 +178,7 @@ class IssueTokenRequestMetadataRulesExpiration implements ModelInterface, ArrayA
      */
     public function __construct(array $data = null)
     {
-        $this->container['valid_until'] = isset($data['valid_until']) ? $data['valid_until'] : null;
-        $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
+        $this->container['user_data'] = isset($data['user_data']) ? $data['user_data'] : null;
     }
 
     /**
@@ -212,49 +206,25 @@ class IssueTokenRequestMetadataRulesExpiration implements ModelInterface, ArrayA
 
 
     /**
-     * Gets valid_until
+     * Gets user_data
      *
-     * @return float|null
+     * @return \NeblioAPI\Model\GetTokenMetadataResponseMetadataOfUtxoUserData|null
      */
-    public function getValidUntil()
+    public function getUserData()
     {
-        return $this->container['valid_until'];
+        return $this->container['user_data'];
     }
 
     /**
-     * Sets valid_until
+     * Sets user_data
      *
-     * @param float|null $valid_until Blockheight at wh
+     * @param \NeblioAPI\Model\GetTokenMetadataResponseMetadataOfUtxoUserData|null $user_data user_data
      *
      * @return $this
      */
-    public function setValidUntil($valid_until)
+    public function setUserData($user_data)
     {
-        $this->container['valid_until'] = $valid_until;
-
-        return $this;
-    }
-
-    /**
-     * Gets locked
-     *
-     * @return bool|null
-     */
-    public function getLocked()
-    {
-        return $this->container['locked'];
-    }
-
-    /**
-     * Sets locked
-     *
-     * @param bool|null $locked Whether this rule can be modified in future transactions
-     *
-     * @return $this
-     */
-    public function setLocked($locked)
-    {
-        $this->container['locked'] = $locked;
+        $this->container['user_data'] = $user_data;
 
         return $this;
     }
