@@ -267,7 +267,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **testnetGetTokenMetadata**
-> \NeblioAPI\Model\GetTokenMetadataResponse testnetGetTokenMetadata($tokenid)
+> \NeblioAPI\Model\GetTokenMetadataResponse testnetGetTokenMetadata($tokenid, $verbosity)
 
 Get Metadata of Token
 
@@ -285,9 +285,10 @@ $apiInstance = new NeblioAPI\Api\TestnetNTP1Api(
     new GuzzleHttp\Client()
 );
 $tokenid = 'tokenid_example'; // string | TokenId to request metadata for
+$verbosity = 3.4; // float | 0 (Default) is fastest, 1 contains token stats, 2 contains token holding addresses
 
 try {
-    $result = $apiInstance->testnetGetTokenMetadata($tokenid);
+    $result = $apiInstance->testnetGetTokenMetadata($tokenid, $verbosity);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TestnetNTP1Api->testnetGetTokenMetadata: ', $e->getMessage(), PHP_EOL;
@@ -300,6 +301,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tokenid** | **string**| TokenId to request metadata for |
+ **verbosity** | **float**| 0 (Default) is fastest, 1 contains token stats, 2 contains token holding addresses | [optional]
 
 ### Return type
 
@@ -317,7 +319,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **testnetGetTokenMetadataOfUtxo**
-> \NeblioAPI\Model\GetTokenMetadataResponse testnetGetTokenMetadataOfUtxo($tokenid, $utxo)
+> \NeblioAPI\Model\GetTokenMetadataResponse testnetGetTokenMetadataOfUtxo($tokenid, $utxo, $verbosity)
 
 Get UTXO Metadata of Token
 
@@ -336,9 +338,10 @@ $apiInstance = new NeblioAPI\Api\TestnetNTP1Api(
 );
 $tokenid = 'tokenid_example'; // string | TokenId to request metadata for
 $utxo = 'utxo_example'; // string | Specific UTXO to request metadata for
+$verbosity = 3.4; // float | 0 (Default) is fastest, 1 contains token stats, 2 contains token holding addresses
 
 try {
-    $result = $apiInstance->testnetGetTokenMetadataOfUtxo($tokenid, $utxo);
+    $result = $apiInstance->testnetGetTokenMetadataOfUtxo($tokenid, $utxo, $verbosity);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TestnetNTP1Api->testnetGetTokenMetadataOfUtxo: ', $e->getMessage(), PHP_EOL;
@@ -352,6 +355,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tokenid** | **string**| TokenId to request metadata for |
  **utxo** | **string**| Specific UTXO to request metadata for |
+ **verbosity** | **float**| 0 (Default) is fastest, 1 contains token stats, 2 contains token holding addresses | [optional]
 
 ### Return type
 

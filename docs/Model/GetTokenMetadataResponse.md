@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **divisibility** | **float** | Decimal places the token is divisible to | [optional] 
 **lock_status** | **bool** | Whether issuance of more tokens is locked | [optional] 
 **aggregation_policy** | **string** | Whether the tokens are aggregatable | [optional] 
+**initial_issuance_amount** | **float** | Total tokens issued in initial issuance | [optional] 
 **total_supply** | **float** | Total number of tokens in supply | [optional] 
 **num_of_holders** | **float** | Total number of addresses this token is held at | [optional] 
 **num_of_transfers** | **float** | Total number of transactions of this token | [optional] 
@@ -16,7 +17,7 @@ Name | Type | Description | Notes
 **first_block** | **float** | Block number token was issued in | [optional] 
 **issuance_txid** | **string** | TXID the token was issued with | [optional] 
 **issue_address** | **string** | Address that issued the tokens | [optional] 
-**metadata_of_issuence** | [**\NeblioAPI\Model\GetTokenMetadataResponseMetadataOfIssuence**](GetTokenMetadataResponseMetadataOfIssuence.md) |  | [optional] 
+**metadata_of_issuance** | [**\NeblioAPI\Model\GetTokenMetadataResponseMetadataOfIssuance**](GetTokenMetadataResponseMetadataOfIssuance.md) |  | [optional] 
 **metadata_of_utxo** | [**\NeblioAPI\Model\GetTokenMetadataResponseMetadataOfUtxo**](GetTokenMetadataResponseMetadataOfUtxo.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
